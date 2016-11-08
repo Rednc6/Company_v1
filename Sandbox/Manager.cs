@@ -8,17 +8,25 @@ namespace Sandbox
     class Manager : Employee
     {
         private int _bonus;
+        private int _monthlyhours;
         
-        public Manager(string name, int salaryPerMonth, int bonus) : base(name, salaryPerMonth)
+        public Manager(string name, int salaryPerMonth, int monthlyhours, int bonus) : base(name, salaryPerMonth)
         {
             _bonus = bonus;
-
-
+            _monthlyhours = monthlyhours;
         }
 
         public override int GetSalaryPerMonth()
         {
-            return base.GetSalaryPerMonth() + _bonus;
+            if (_monthlyhours >= 180)
+            {
+                return base.GetSalaryPerMonth() + _bonus;
+
+            }
+            else
+            {
+                return base.GetSalaryPerMonth();
+            }
         }
     }
 }
