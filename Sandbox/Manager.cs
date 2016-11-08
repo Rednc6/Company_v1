@@ -30,7 +30,7 @@ namespace Sandbox
         }
         public void sethours(int hours)
         {
-            hours = _monthlyhours;
+            _monthlyhours = _monthlyhours + hours;
             
         }
     }
