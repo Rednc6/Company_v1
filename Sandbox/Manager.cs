@@ -28,5 +28,10 @@ namespace Sandbox
                 return base.GetSalaryPerMonth();
             }
         }
+        public void sethours(int hours)
+        {
+            hours = _monthlyhours;
+            
+        }
     }
 }
